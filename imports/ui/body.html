@@ -1,0 +1,44 @@
+<body>
+  <p class="inloggen">{{> loginButtons}}</p>
+  {{#if currentUser}}
+  <div class="container">
+    <header>
+      <h1>Cijfer Registratie:</h1>
+      <div>
+        <form class='nieuw-cijfer'>
+          <label> Naam Leerling: </label>
+          <input type="text" id="leerling">
+
+          <label> Vak: </label>
+          <select id="vak">
+            <option value="Nederlands">Nederlands</option>
+            <option value="Engels">Engels</option>
+            <option value="Frans">Frans</option>
+            <option value="Duits">Duits</option>
+            <option value="Wiskunde">Wiskunde</option>
+            <option value="Aardrijkskunde">Aardrijkskunde</option>
+            <option value="Geschiedenis">Geschiedenis</option>
+            <option value="Economie">Economie</option>  
+          </select>
+
+          <label> Cijfer: </label>
+          <input type="text" id="cijfer">
+
+          <input type="submit" id="invoeren" value="Submit">
+
+        </form>
+      </div>
+    
+    </header>
+
+    <h2> Overzicht Cijfers: </h2>
+
+    <ul>
+      {{#each cijfers}}
+        {{> cijfer}}
+      {{/each}}
+    </ul>
+
+  </div>
+  {{/if}}
+</body>

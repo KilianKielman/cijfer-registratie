@@ -1,0 +1,14 @@
+<template name="cijfer">
+  <li>Leerling: {{leerling}}</li>
+  <li>Vak: {{vak}}</li>
+  <li>Cijfer: {{cijfer}}</li>
+  <li>Wilt u het cijfer wijzigen?
+  	<form class='wijzigen'>
+ 	    <input type="text" id="anderCijfer">
+      <input type="submit" id='wijzigCijfer' value="Wijzig">
+  	</form>
+  </li>
+  <li>Wilt u het gemiddelde weten? <button class="gemiddelde"> Ja</button></li>
+  <li>Wilt u het cijfer verwijderen? <button class="delete">&times;</button></li>
+  <li></li>
+</template>
